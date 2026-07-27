@@ -1,5 +1,4 @@
 -- Databricks notebook source
-
 SELECT *
 FROM brighttv_case_study.bright_tv.bright_tv_user_profiles;
 
@@ -114,5 +113,4 @@ SELECT
 FROM bright_viewership AS A
 LEFT JOIN bright_tv_user_profiles AS B
   ON A.UserID = B.Userid;
-
 
