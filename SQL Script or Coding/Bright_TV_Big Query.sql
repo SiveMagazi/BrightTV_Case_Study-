@@ -2,6 +2,10 @@
 SELECT *
 FROM brighttv_case_study.bright_tv.bright_tv_user_profiles;
 
+SELECT *
+FROM brighttv_case_study.bright_tv.bright_viewership;
+
+
 WITH bright_tv_user_profiles AS(
 
 SELECT 

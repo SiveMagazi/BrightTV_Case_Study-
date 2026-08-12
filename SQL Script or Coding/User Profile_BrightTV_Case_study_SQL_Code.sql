@@ -2,6 +2,21 @@
 SELECT *
 FROM brighttv_case_study.bright_tv.bright_tv_dataset;
 
+-- CHECKING FOR DUPICATES-- INFORMALLY
+
+SELECT COUNT (DISTINCT userid ) AS Subs
+FROM brighttv_case_study.bright_tv.bright_tv_dataset;
+
+-- CHECKING FOR DUPLICATES FORMALY--
+
+SELECT COUNT(*),
+       userid
+FROM brighttv_case_study.bright_tv.bright_tv_dataset
+GROUP BY userid
+HAVING COUNT(*) > 1;
+
+-- INPECTING GENDER COLUMN--
+
 SELECT DISTINCT `gender`
 FROM brighttv_case_study.bright_tv.bright_tv_dataset;
 -----------------------------------------------------------------------
@@ -48,8 +63,7 @@ SELECT COUNT(DISTINCT userid) AS Subs,
         GROUP BY Enthnicity;
 
 select * 
-from `brighttv_case_study`.`bright_tv`.`bright_tv_dataset` 
-limit 100;
+from brighttv_case_study`.`bright_tv`.`bright_tv_dataset;
 
 SELECT DISTINCT `gender`
 FROM brighttv_case_study.bright_tv.bright_tv_dataset;
@@ -192,7 +206,7 @@ CTE
 CREATE OR REPLACE TEMPORARY TABLE processed_bright_tv_dataset As (
 SELECT 
      UserID,
-
+        Email,
         CASE 
             WHEN 'Email' IS NOT NULL THEN 1
             ELSE 0
@@ -237,3 +251,5 @@ SELECT
         END AS Age_group
         From brighttv_case_study.bright_tv.bright_tv_dataset);
 
+SELECT *
+FROM processed_bright_tv_dataset; 
