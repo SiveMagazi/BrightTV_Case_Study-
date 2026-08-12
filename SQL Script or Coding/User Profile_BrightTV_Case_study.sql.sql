@@ -17,7 +17,7 @@ HAVING COUNT(*) > 1;
 
 -- INPECTING GENDER COLUMN--
 
-SELECT DISTINCT `gender`
+SELECT DISTINCT gender
 FROM brighttv_case_study.bright_tv.bright_tv_dataset;
 -----------------------------------------------------------------------
 -- USE CASE STATEMENT TO REPLACE UNCLASSIFIED WITH UNKNOWN Gender checks
@@ -34,7 +34,7 @@ FROM brighttv_case_study.bright_tv.bright_tv_dataset;
 -----------------------------------------------------------------------
 -- Race Checks
 -----------------------------------------------------------------------
-SELECT DISTINCT `race`
+SELECT DISTINCT race
 FROM brighttv_case_study.bright_tv.bright_tv_dataset;
 -----------------------------------------------------------------------
 -- USE CASE STATEMENT TO REPLACE UNCLASSIFIED WITH UNKNOWN Race checks
@@ -63,9 +63,9 @@ SELECT COUNT(DISTINCT userid) AS Subs,
         GROUP BY Enthnicity;
 
 select * 
-from brighttv_case_study`.`bright_tv`.`bright_tv_dataset;
+from brighttv_case_stud.bright_tv.bright_tv_dataset;
 
-SELECT DISTINCT `gender`
+SELECT DISTINCT gender
 FROM brighttv_case_study.bright_tv.bright_tv_dataset;
 -----------------------------------------------------------------------
 -- USE CASE STATEMENT TO REPLACE UNCLASSIFIED WITH UNKNOWN Gender checks
@@ -82,7 +82,7 @@ FROM brighttv_case_study.bright_tv.bright_tv_dataset;
 -----------------------------------------------------------------------
 -- Race Checks
 -----------------------------------------------------------------------
-SELECT DISTINCT `race`
+SELECT DISTINCT race
 FROM brighttv_case_study.bright_tv.bright_tv_dataset;
 -----------------------------------------------------------------------
 -- USE CASE STATEMENT TO REPLACE UNCLASSIFIED WITH UNKNOWN Race checks
